@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bold links | chapter05 | hover underline</title>
+    <style type="text/css">
+        div {margin-bottom: 10px;}
+        /** normal: no line; */     
+        a:link, a:visited {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /** 悬停用线 */
+        a:hover, a:focus, a:active {
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .a-border-bottom a:link, a:visited {
+            text-decoration: none;
+            border-bottom: 1px dotted; /** 边框不设置颜色，他将使用默认样式中颜色，变现为和字体一样的颜色。 */
+        }
+        .a-border-bottom  a:hover, a:focus, a:active {
+            border-bottom-style: solid;
+        }
+    </style>
+</head>
+<body>
+<p>使用字体<code>font-weight: bold;</code>将引起副作用：当点击锚点后，下面的划线将随之变粗。这不是我们想要的！</p>
+<div><a href="#">默认a标签</a></div>
+<p>使用边框<code>border-bottom: 1px dotted #000;</code>则不会出现上述问题！</p>
+<div class="a-border-bottom"><a href="#">用边框底部样式的a标签</a></div>
+</body>
+</html>
